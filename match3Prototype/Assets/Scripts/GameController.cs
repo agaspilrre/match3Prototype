@@ -60,6 +60,8 @@ public class GameController : MonoBehaviour {
         }
 
         //checkNumbersGrid();
+        checkMatch();
+        checkVerticalMatch();
     }
 
     /// <summary>
@@ -450,7 +452,7 @@ public class GameController : MonoBehaviour {
         //Instanciamos nuevas tiles en parte superior y borramos las que hacen match
         int upX = sizeY;
         int auxX = 0;
-        int auxY = 0;
+        
 
        
         for (int i = 0; i < DeleteVerticalTiles.Count; i++) {
@@ -461,7 +463,7 @@ public class GameController : MonoBehaviour {
             }
 
             auxX = DeleteVerticalTiles[i].getX();
-            auxY = DeleteVerticalTiles[i].getY();
+           
             instantiateTile(upX, DeleteVerticalTiles[i].getY());
 
 
